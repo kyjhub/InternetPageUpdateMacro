@@ -19,6 +19,5 @@
   크롬 설정에는 왜 자동으로 쿠키를 차단하는 기능이 없을까? 왜 수동으로 매번 쿠키를 삭제해줘야하는걸까?
   이럴 땐 엣지 최고
 
-
-
+        
 > **<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 주의:** 실행파일을 사용하려면 edge 드라이버를 C:\study\browser_driver\edgedriver_win64에 놓아야한다.

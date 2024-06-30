@@ -21,4 +21,4 @@
 
 &nbsp;
         
-⚠ ** 주의: 실행파일을 사용하려면 edge 드라이버를 C:\study\browser_driver\edgedriver_win64에 놓아야한다. **
+⚠ **주의: 실행파일을 사용하려면 edge 드라이버를 C:\study\browser_driver\edgedriver_win64에 놓아야한다.**

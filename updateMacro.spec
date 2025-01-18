@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['updateMacro.py'],
+    ['C:\\study\\updateMacro\\updateMacro.py'],
     pathex=[],
     binaries=[],
     datas=[],

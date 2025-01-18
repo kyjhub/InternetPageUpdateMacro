@@ -17,6 +17,8 @@ def inputAndUpdate():
     # 옵션 설정
     options = webdriver.EdgeOptions()
     options.add_argument("headless")
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     options.use_chromium = True
     options.add_experimental_option("detach", True)

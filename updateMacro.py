@@ -51,7 +51,7 @@ def inputAndUpdate():
     #새로고침 완료시 알림창 띄우기
     win32api.MessageBox(0, '새로고침을 완료했습니다.', '알림', 16)
     
-    print("50번 새로고침 끝")
+    print(f"{n}번 새로고침 끝")
 
 def execute():
     thread = threading.Thread(target=inputAndUpdate)

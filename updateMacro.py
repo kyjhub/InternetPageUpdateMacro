@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.edge import service
 from selenium.webdriver.common.keys import Keys
-import win32api
 from tkinter import *
 import threading
 import sys
@@ -10,15 +9,14 @@ import sys
 # 루트화면 생성
 tk = Tk()
 tk.title("새로고침 매크로")
-
-
+# http://www.gcnuri.or.kr/
+# http://www.gcnuri.or.kr/bbs/board.php?bo_table=s3_1&wr_id=3944&sca=%EC%98%88%EC%82%B0+%EA%B3%B5%EC%8B%9C&sfl=wr_subject&stx=2023%EB%85%84&sop=and
 def inputAndUpdate():
     homePage = str(hp.get())
-    n = int(updateNum.get())
+    updateSite = str(bs.get())
 
     # 옵션 설정
     options = webdriver.EdgeOptions()
-    options.add_argument("headless")
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     options.use_chromium = True
     options.add_experimental_option("detach", True)
@@ -45,30 +43,27 @@ def inputAndUpdate():
                         "//*[@id='modal-root']/div/div/div/div[2]/div/div[2]/div/form/div[2]/button[1]").click()
 
     # 내가 지정한 url로 접속
-    driver.get(homePage)
-    for _ in range(n):  # 새로고침할 횟수 지정
+    driver.get(updateSite)
+    for _ in range(50):  # 새로고침할 횟수 지정
         driver.refresh()
 
-    # 새로고침 완료시 알림창 띄우기
-    win32api.MessageBox(0, '새로고침을 완료했습니다.', '알림', 16)
-
-    print(f"{n}번 새로고침 끝")
-
+    print("50번 새로고침 끝")
 
 def execute():
     thread = threading.Thread(target=inputAndUpdate)
     thread.start()
 
-
-label1 = Label(tk, text="새로고침할 주소").grid(row=0, column=0)
-label2 = Label(tk, text="새로고침 횟수").grid(row=1, column=0)
+label1 = Label(tk, text="대표 홈페이지 주소").grid(row=0, column=0)
+label2 = Label(tk, text="새로고침할 주소").grid(row=1, column=0)
 
 hp = Entry(tk)
-updateNum = Entry(tk)
+bs = Entry(tk)
 hp.grid(row=0, column=1)
-updateNum.grid(row=1, column=1)
+bs.grid(row=1, column=1)
 
 btn1 = Button(tk, text="확인", command=execute).grid(row=2, column=1)
 tk.mainloop()
 
 sys.exit()
+
+

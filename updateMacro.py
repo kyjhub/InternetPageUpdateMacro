@@ -5,6 +5,7 @@ from tkinter import *
 import win32api
 import threading
 import sys
+import time
 
 # 루트화면 생성
 tk = Tk()
@@ -49,6 +50,7 @@ def inputAndUpdate():
     driver.get(homePage)
     for _ in range(n):  # 새로고침할 횟수 지정
         driver.refresh()
+        time.sleep(0.2)
 
     # 새로고침 완료시 알림창 띄우기
     # win32api.MessageBox(0, '새로고침을 완료했습니다.', '알림', 16)

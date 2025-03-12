@@ -23,4 +23,7 @@
         
 ⚠ **주의: 실행파일을 사용하려면 edge 드라이버를 C:\study\browser_driver\edgedriver_win64에 놓아야한다.**  
 
+⚠ **주의: 에러가 난다면 edge driver와 edge browser의 버전이 맞지 않아서
+발생할 수도 있다. edge browser와 edge driver를 최신버전으로 업데이트 한 후에 사용해보길 바란다. C:\study\browser_driver\edgedriver_win64에 놓아야한다.**  
+
 ⚠ **문제점: zip파일을 깃허브에서 다운로드하면 실행이 안되지만 zip파일을 메일로 보내서 다운로드하면 실행이 잘 된다.**
